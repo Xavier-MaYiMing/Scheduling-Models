@@ -27,7 +27,7 @@ In CP, we introduce **interval variables**, each representing an interval of tim
 | Element            | It returns an element of an array.                           |
 | PresenceOf         | It returns the presence status of an interval variable.      |
 
-**Sets and variables used in Models**
+**Sets and variables used in models**
 
 | Sets            |                                                              |
 | --------------- | ------------------------------------------------------------ |
