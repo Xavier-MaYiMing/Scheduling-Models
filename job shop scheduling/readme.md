@@ -12,10 +12,12 @@ $$
 
 ##### Subject to:
 
+**(1)**
 $$
 c_{j1} \geq P_{j1}, \quad \forall j \in \mathcal{J} 
 $$
 
+**(2)**
 $$
 c_{ji} \geq c_{ji'} + P_{ji}, \quad \forall j \in \mathcal{J}, i \in \mathcal{I} 
 $$
