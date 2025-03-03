@@ -12,12 +12,10 @@ $$
 
 ##### Subject to:
 
-**(1)**
 $$
 c_{j1} \geq P_{j1}, \quad \forall j \in \mathcal{J} 
 $$
 
-**(2)**
 $$
 c_{ji} \geq c_{ji'} + P_{ji}, \quad \forall j \in \mathcal{J}, i \in \mathcal{I} 
 $$
@@ -49,25 +47,25 @@ Constraint (1) ensures that the completion time of each job $j$ on the first mac
 ##### Objective:
 
 $$
-\min \quad C_{max} \tag{CP-JSP}
+\min \quad C_{max} 
 $$
 
 ##### Subject to:
 
 $$
-Task_{ji} = \text{IntervalVar}(P_{ji}), \quad \forall j \in \mathcal{J}, i \in \mathcal{I} \tag{1}
+Task_{ji} = \text{IntervalVar}(P_{ji}), \quad \forall j \in \mathcal{J}, i \in \mathcal{I} \quad \textbf{(1)}
 $$
 
 $$
-\text{NoOverlap}(Task_{ji}: j \in \mathcal{J}), \quad \forall i \in \mathcal{I} \tag{2}
+\text{NoOverlap}(Task_{ji}: j \in \mathcal{J}), \quad \forall i \in \mathcal{I} 
 $$
 
 $$
-\text{EndBeforeStart}(Task_{ji}, Task_{ji'}), \quad \forall j \in \mathcal{J}, i \in \mathcal{I} \tag{3}
+\text{EndBeforeStart}(Task_{ji}, Task_{ji'}), \quad \forall j \in \mathcal{J}, i \in \mathcal{I} 
 $$
 
 $$
-C_{max} = \max_{j}(\text{EndOf}(Task_{j|\mathcal{I}|})) \tag{4}
+C_{max} = \max_{j}(\text{EndOf}(Task_{j|\mathcal{I}|})) 
 $$
 
 Constraint (1) define the interval variables, one for each job at each stage. Constraint (2) ensures that no two operations from different jobs can be processed on the same machine at the same time. Constraint (3) respects the processing route of a job, and $i'$ denotes the stage before stage $i$ in job $j$. Constraint (4) is the objective function that uses the "EndOf" over interval variables of jobs at the last stage $|\mathcal{I}|$. 
