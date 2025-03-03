@@ -7,37 +7,37 @@ The JSP involves assigning a set of jobs - each comprising a sequence of operati
 ##### Objective:
 
 $$
-\min \quad C_{max} \tag{MIP-JSP}
+\min \quad C_{max} 
 $$
 
 ##### Subject to:
 
 $$
-c_{j1} \geq P_{j1}, \quad \forall j \in \mathcal{J} \tag{1}
+c_{j1} \geq P_{j1}, \quad \forall j \in \mathcal{J} 
 $$
 
 $$
-c_{ji} \geq c_{ji'} + P_{ji}, \quad \forall j \in \mathcal{J}, i \in \mathcal{I} \tag{2}
+c_{ji} \geq c_{ji'} + P_{ji}, \quad \forall j \in \mathcal{J}, i \in \mathcal{I} 
 $$
 
 $$
-c_{ji} \geq c_{j'i} + P_{ji} - M (1 - x_{ijj'}), \quad \forall i \in \mathcal{I}, j, j' \in \mathcal{J}: j > j' \tag{3}
+c_{ji} \geq c_{j'i} + P_{ji} - M (1 - x_{ijj'}), \quad \forall i \in \mathcal{I}, j, j' \in \mathcal{J}: j > j' 
 $$
 
 $$
-c_{j'i} \geq c_{ji} + P_{j'i} - M \cdot x_{ijj'}, \forall i \in \mathcal{I}, j, j' \in \mathcal{J}: j > j' \tag{4}
+c_{j'i} \geq c_{ji} + P_{j'i} - M \cdot x_{ijj'}, \forall i \in \mathcal{I}, j, j' \in \mathcal{J}: j > j' 
 $$
 
 $$
-C_{max} \geq c_{ji}, \quad \forall j \in \mathcal{J}, i \in \mathcal{I} \tag{5}
+C_{max} \geq c_{ji}, \quad \forall j \in \mathcal{J}, i \in \mathcal{I} 
 $$
 
 $$
-c_{ji} \geq 0, \quad \forall j \in \mathcal{J}, i \in \mathcal{I} \tag{6}
+c_{ji} \geq 0, \quad \forall j \in \mathcal{J}, i \in \mathcal{I} 
 $$
 
 $$
-x_{ijj'} \in \{0, 1\}, \quad \forall i \in \mathcal{I}, j, j' \in \mathcal{J}: j > j' \tag{7}
+x_{ijj'} \in \{0, 1\}, \quad \forall i \in \mathcal{I}, j, j' \in \mathcal{J}: j > j' 
 $$
 
 Constraint (1) ensures that the completion time of each job $j$ on the first machine is greater than the processing time on that machine. Constraint (2) respects the processing route of a job, and $i'$ denotes the stage before stage $i$ in job $j$. Constraints (3) and (4) enforce disjunctive constraints on the same machine $i$ such that job $j$ and job $j'$ do not overlap. Constraint (5) defines the makespan, which is the maximum completion time of all jobs on all stages. Constraints (6) and (7) define the nature of the decision variables.
