@@ -25,7 +25,7 @@ c_{ji} \geq c_{j'i} + P_{ji} - M (1 - x_{ijj'}), \quad \forall i \in \mathcal{I}
 $$
 
 $$
-c_{j'i} \geq c_{ji} + P_{j'i} - M \cdot x_{ijj'}, \forall i \in \mathcal{I}, j, j' \in \mathcal{J}: j > j' \quad \textbf{(4)}
+c_{j'i} \geq c_{ji} + P_{j'i} - M \cdot x_{ijj'}, \quad \forall i \in \mathcal{I}, j, j' \in \mathcal{J}: j > j' \quad \textbf{(4)}
 $$
 
 $$
